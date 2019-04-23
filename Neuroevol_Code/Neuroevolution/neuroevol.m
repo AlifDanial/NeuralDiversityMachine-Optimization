@@ -82,6 +82,7 @@ data.limits = limits;
 numParamEachSol = compNumEDeeNNparam(limits);
 memParams.numSolParams = numParamEachSol; % number of parameters in solution
 % Loop through tests
+tic;
 for ti=1:numTests
     disp(['Test ' int2str(ti)]);
     % Create training and test set
@@ -97,6 +98,6 @@ for ti=1:numTests
     aNet = createNetEDeeNN1(limits,ps{1}.rawParam);
     res.neuroevol{ai}.bestNet{ti} = aNet;  
 end
-
+toc
 end
 
