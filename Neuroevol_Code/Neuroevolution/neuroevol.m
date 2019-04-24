@@ -8,7 +8,7 @@
 function res = neuroevol(data,dataLabel)
 
 % Experimental parameters
-numTests = 3; %10;
+numTests = 10; %10;
 propTrain = 1; % proportion of training data (vis-a-vis test data)
 
 % Neural network parameters 
@@ -39,7 +39,7 @@ memParams.maxEval = Inf; % max. num. of evaluations
 memParams.minCost = -Inf; % minimum cost stopping condition
 memParams.ngSize = 24; % 12; % size of next generation
 memParams.numLayers = numLayers;
-memParams.percTrim = 0.4; % NG-percentage of solutions to trim off the DE expanded solution set
+memParams.percTrim = 0.7; % NG-percentage of solutions to trim off the DE expanded solution set
 memParams.trimMethod = 0;
 memParams.paramRange = [0 1]; % range of solution parameter values
 memParams.minDiffLF = 0.1; % minimum difference between a leader and its immediate follower (see N1)

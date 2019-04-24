@@ -162,7 +162,7 @@ while (totEval <= memParams.maxEval) && (dei <= memParams.maxIter) && (bestCost 
     
     % *** Individual learning expansion
     % You can do point-based, individual, local learning here
-    solPostIL = HillClimbingMOD(solPostGlob,memParams,trainData); % ignoring individual learning
+    solPostIL = HillClimbing(solPostGlob,memParams,trainData); % ignoring individual learning
     %solPostIL = solPostGlob;
    
     

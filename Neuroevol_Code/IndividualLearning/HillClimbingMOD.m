@@ -4,10 +4,10 @@ function [solPostGlob] = HillClimbingMOD(solPostGlob,memParams,trainData)
 numPat = memParams.numPat; %train data index
 weightIn = numPat+2; %weight index
 
-for k = 1:5
-    for i = 1:5
+for k = 1:3
+    for i = 1:10
         currentSol = solPostGlob(i, weightIn:end);       
-        for j = 1:5
+        for j = 1:10
             c = randi([1 119]); %choose random weights col between 1-119
             currentSol(c) = rand(); %randomize weights
             
@@ -30,6 +30,7 @@ for k = 1:5
             end
         end
     end
+end
 end
 
 
